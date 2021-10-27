@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'static_pages#home'
   get 'static_pages/home'
   # => StaticPages#homeと同じ
   get 'static_pages/help'
@@ -7,5 +8,5 @@ Rails.application.routes.draw do
   # GETリクエスト送られたときに反応
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'application#hello'
+  #root 'application#hello'
 end
