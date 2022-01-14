@@ -15,6 +15,14 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # Success (valid params)
+      
+      flash[:success] = "Welcome to the Sample App!"
+      
+      # GET /users/#{@user.id}
+      redirect_to @user
+      # redirect_to user_path(@user)
+      # redirect_to user_path(@user.id)
+      #sample: redirect_to user_path(1) => /users/1
     else
       # Failure (not valid params)
       render 'new'
